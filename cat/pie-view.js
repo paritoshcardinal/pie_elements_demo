@@ -7955,7 +7955,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_ui_categorize__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_ui_categorize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pie_ui_categorize__);
 
-//customElements.define('categorize-element', __WEBPACK_IMPORTED_MODULE_0__pie_ui_categorize___default.a);
+customElements.define('categorize-element', __WEBPACK_IMPORTED_MODULE_0__pie_ui_categorize___default.a);
 
 /***/ }),
 /* 159 */
