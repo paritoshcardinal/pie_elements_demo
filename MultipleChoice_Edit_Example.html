@@ -7,10 +7,12 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+
     .note {
       padding: 20px;
       background-color: lavenderblush;
     }
+
     .holder {
       display: flex;
     }
@@ -26,19 +28,25 @@
   </p>
   <!-- Uncomment below div to see Multiple choice element -->
   <div class="mc">
-  <div><input type="submit" value="submit"/></div>
-	<table>
-            <tr>
-                <td style="width:70%"><multiple-choice-configure pie-id="1"></multiple-choice-configure></td>
-                <td style="width:2%;background-color:#eee"></td>
-                <td style="vertical-align:top">
-                    <div>STUDENT VIEW <a href="javascript:none">Check Answer</a></div>
-                    <multiple-choice pie-id="1"> </multiple-choice>
-                </td>
-            </tr>
+    <div>
+      <input type="submit" value="submit" />
+    </div>
+    <table>
+      <tr>
+        <td style="width:70%">
+          <multiple-choice-configure pie-id="1"></multiple-choice-configure>
+        </td>
+        <td style="width:2%;background-color:#eee"></td>
+        <td style="vertical-align:top">
+          <div>STUDENT VIEW
+            <span id="check-answer">Check Answer</span>
+          </div>
+          <multiple-choice pie-id="1"> </multiple-choice>
+        </td>
+      </tr>
     </table>
-  </div> 
-	<!-- Multiple choice element end -->
+  </div>
+  <!-- Multiple choice element end -->
   <!-- Uncomment below div to see category element 
   <div class="category">
     <table>
@@ -53,7 +61,7 @@
     </table>
   </div>
    Category element end -->
-  
+
   <script src="./jquery-1.11.1.min.js"></script>
   <script src="./main.js"></script>
   <!-- MC related js -->
@@ -61,12 +69,30 @@
   <script src="./mc/pie-controllers.js"></script>
   <script src="./mc/pie-view.js"></script>
   <script type="text/javascript">
-	$.getJSON( "./mc/config2.json", function( data ) {
-		 data.models.forEach((val) => {
-            const model = val;
-            renderPIE(model,'multiple-choice');
-          }); 
-	});
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      document.querySelector("#check-answer").addEventListener('click', () => {
+        env = { mode: 'evaluate' }
+        const s = window.session.find(s => s.id === "1");
+        window['pie-controller-pie-item']["multiple-choice"].model(window.mcModel, s, env)
+          .then(uiModel => {
+
+            const id = "1";
+            let a = "multiple-choice[pie-id='" + id + "']";
+            let el = document.querySelector(a);
+            el.model = uiModel;
+          })
+      })
+    })
+    $.getJSON("./mc/config2.json", function (data) {
+      data.models.forEach((val) => {
+        const model = val;
+
+        window.mcModel = model;
+        renderPIE(window.mcModel, 'multiple-choice');
+      });
+    });
   </script>
   <!-- -->
   <!-- Category related js 
@@ -76,9 +102,8 @@
   <script src="./cat/cat_main.js"></script>
    -->
 
-  
-  
+
+
 </body>
 
 </html>
-
