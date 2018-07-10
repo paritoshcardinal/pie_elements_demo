@@ -816,6 +816,20 @@ const prepareChoice = (mode, defaultFeedback) => choice => {
       out.feedback = choice.feedback.value;
     }
   }
+  /*** Uncomment the below line to show custom feedback in gather mode ***/
+  /***
+  else if(mode == 'gather') {
+    out.correct = !!choice.correct;
+
+    const feedbackType = choice.feedback && choice.feedback.type || 'none';
+
+    if (feedbackType === 'default') {
+      out.feedback = defaultFeedback[choice.correct ? 'correct' : 'incorrect'];
+    } else if (feedbackType === 'custom') {
+      out.feedback = choice.feedback;
+    }
+  }
+  ******/
 
   return out;
 };

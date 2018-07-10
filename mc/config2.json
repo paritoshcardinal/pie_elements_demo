@@ -1,0 +1,50 @@
+{
+  "elements": {
+    "multiple-choice-configure": "../.."
+  },
+  "models": [
+    {
+      "choiceMode": "radio",
+	  "prompt":"this is demo prompt",
+      "choices": [
+        {
+          "value": "0",
+          "label": "<div> this is demo label A</div>",
+          "feedback": {
+            "type": "custom",
+            "value": "this is demo feedback for label A"
+          }
+        },
+        {
+          "value": "1",
+          "label": "<div> this is demo label B</div>",
+		  "correct":true,
+          "feedback": {
+            "type": "custom",
+            "value": "this is demo feedback for label B"
+          }
+        },
+        {
+          "value": "2",
+          "label": "<div> this is demo label C</div>",
+          "feedback": {
+            "type": "custom",
+            "value": "this is demo feedback for label C"
+          }
+        },
+        {
+          "value": "3",
+          "label": "<div> this is demo label D</div>",
+          "feedback": {
+            "type": "custom",
+            "value": "this is demo feedback for label D"
+          }
+        }
+      ],
+      "element": "multiple-choice-configure",
+      "id": "1",
+      "keyMode": "letters",
+      "showChoiceLabel": false
+    }
+  ]
+}
