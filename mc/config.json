@@ -1,0 +1,49 @@
+{
+  "elements": {
+    "multiple-choice-configure": "../.."
+  },
+  "models": [
+    {
+      "choiceMode": "radio",
+      "choices": [
+        {
+          "feedback": {
+            "type": "none",
+            "value": ""
+          },
+          "label": "",
+          "value": ""
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        }
+      ],
+      "element": "multiple-choice-configure",
+      "id": "1",
+      "keyMode": "letters",
+      "prompt": "",
+      "showChoiceLabel": false
+    }
+  ]
+}
