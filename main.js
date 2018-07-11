@@ -22,8 +22,8 @@
             let a = elementName+"[pie-id='" + id + "']";
             let el = window.document.querySelector(a);
             if (el) {
+				el.session = session;
                 el.model = uiModel;
-                el.session = session;
             }
             //below code show be run when you want to create config object
             if (updateConfig) {
