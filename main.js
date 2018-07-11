@@ -32,7 +32,7 @@ function updateElement(model, id, updateConfig, elementName) {
         let configEl = window.document.querySelector(b);
         if (configEl) {
           //set the raw model on config - it want's all the info.
-          configEl.model = uiModel;
+          configEl.model = model;
           configEl.addEventListener("model.updated", e => {
             updateElement(e.detail.update, id, false, elementName);
           });
