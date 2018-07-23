@@ -16,6 +16,7 @@ function renderPIE(model, elementName) {
 }
 
 function updateElement(model, id, updateConfig, elementName) {
+
   const session = getSession(id);
   window["pie-controller-pie-item"][elementName]
     .model(model, session, { mode: "gather" })

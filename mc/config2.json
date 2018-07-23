@@ -9,7 +9,7 @@
       "choices": [
         {
           "value": "0",
-          "label": "<div> this is demo label A</div>",
+          "label": "<div> qewrfqefervervwervervreverververve wervwevknrvmn kj ejr v ervk erv erv rev rev erv lerv ler vler vl erlv eelrv krelvmlervmlermvlermvlermvlmvl krvlermvlmervlmervlmerlv rlvkmklmlmlmlmlml kelrvnlevlvlrvnlrvnlrnvlrnvlnrvlrvlkrvlrvlmrv  lrvlmvlmrvlmrvlmv</div>",
           "feedback": {
             "type": "custom",
             "value": "this is demo feedback for label A"
@@ -17,7 +17,7 @@
         },
         {
           "value": "1",
-          "label": "<div> this is demo label B</div>",
+          "label": "<div> <b>this is demo label B</b></div>",
 		  "correct":true,
           "feedback": {
             "type": "custom",
