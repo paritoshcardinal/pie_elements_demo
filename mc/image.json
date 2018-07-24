@@ -1,0 +1,49 @@
+{
+  "elements": {
+    "multiple-choice-configure": "../.."
+  },
+  "models": [
+    {
+      "choiceMode": "radio",
+      "choices": [
+        {
+          "feedback": {
+            "type": "none",
+            "value": ""
+          },
+          "label": "",
+          "value": ""
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        }
+      ],
+      "element": "multiple-choice-configure",
+      "id": "1",
+      "keyMode": "letters",
+      "prompt": "<p>Mr. Lopez divided his garden into equal parts for planting, as shown in the diagram below. The shaded part of the diagram shows where he planted carrots.&nbsp;</p>\n<p>&nbsp;<img src=\"http://media.powermylearning.org/content/assets/userpromptimages/131097063695123689_post.png\" width=\"149\" height=\"104\" /></p>\n<p>Which fraction of the garden is planted with carrots?</p>",
+      "showChoiceLabel": false
+    }
+  ]
+}

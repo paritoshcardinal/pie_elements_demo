@@ -1,0 +1,49 @@
+{
+  "elements": {
+    "multiple-choice-configure": "../.."
+  },
+  "models": [
+    {
+      "choiceMode": "radio",
+      "choices": [
+        {
+          "feedback": {
+            "type": "none",
+            "value": ""
+          },
+          "label": "",
+          "value": ""
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        },
+        {
+          "value": "",
+          "label": "",
+          "feedback": {
+            "type": "none",
+            "value": ""
+          }
+        }
+      ],
+      "element": "multiple-choice-configure",
+      "id": "1",
+      "keyMode": "letters",
+      "prompt": "<p>Malcolm wrote the function <span class=\"mf-mc-pml-pie\">$y=0.70x$</span>, to represent the sale price of an item at a 30%-off sale. Malcolm's function gives the sale price, <span class=\"mf-mc-pml-pie\">$y$</span>, based on the regular price, <span class=\"mf-mc-pml-pie\">$x$</span>, of the item. <br><br>Selena created a table of values for a function relating how long she had been on the train and how far she was from her grandmother's house at that time.</p>\n<table class=\"tblmargin\" border=\"2\">\n<tbody>\n<tr>\n<th class=\"tabpadding\" colspan=\"2\">Selena's Input/Output Table</th>\n</tr>\n<tr>\n<th class=\"tabpadding\">time in minutes since beginning of train ride (<span class=\"mf-mc-pml-pie\">$x$</span>)</th>\n<th class=\"tabpadding\">distance in miles between Selena's and her grandmother's house (<span class=\"mf-mc-pml-pie\">$y$</span>)</th>\n</tr>\n<tr>\n<td class=\"numbersCenter\">5</td>\n<td class=\"numbersCenter\">24</td>\n</tr>\n<tr>\n<td class=\"numbersCenter\">10</td>\n<td class=\"numbersCenter\">21</td>\n</tr>\n<tr>\n<td class=\"numbersCenter\">15</td>\n<td class=\"numbersCenter\">18</td>\n</tr>\n<tr>\n<td class=\"numbersCenter\">20</td>\n<td class=\"numbersCenter\">15</td>\n</tr>\n</tbody>\n</table>\n<p>Which function has a negative rate of change, and what is the rate of change?</p>",
+      "showChoiceLabel": false
+    }
+  ]
+}
