@@ -37,7 +37,15 @@ function updateElement(model, id, updateConfig, elementName) {
           configEl.addEventListener("model.updated", e => {
             updateElement(e.detail.update, id, false, elementName);
           });
+		  configEl.addEventListener("insert.image", e => {
+            //log('insert.image event received..');
+			this._insertImageHandler = e.detail;
+			this._$fileInput = window.document.querySelector('input[type="file"]');
+			this._$fileInput.click();
+          });
         }
       }
     });
 }
+
+
