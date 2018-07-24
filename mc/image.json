@@ -42,7 +42,7 @@
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<p>Mr. Lopez divided his garden into equal parts for planting, as shown in the diagram below. The shaded part of the diagram shows where he planted carrots.&nbsp;</p>\n<p>&nbsp;<img src=\"http://media.powermylearning.org/content/assets/userpromptimages/131097063695123689_post.png\" width=\"149\" height=\"104\" /></p>\n<p>Which fraction of the garden is planted with carrots?</p>",
+      "prompt": "<p>The local aquarium is building a new tank to hold a large collection of tropical fish. The aquarium will be a glass tank in the shape of a rectangular prism that can be viewed from all sides, including the top and the bottom. The tank is 8 meters long, 9 meters wide and 5 meters high as shown in the net below.<br /> <img src=\"http://media.powermylearning.org//content/assets/userpromptimages/6GA4-41.jpeg\" alt=\"\" /> <br /> A new billboard advertising the fish collection will say,\"An amazing ___________ square meters of tropical fish viewing.\" What is the total surface area of the aquarium that should fill in the blank?</p>",
       "showChoiceLabel": false
     }
   ]
