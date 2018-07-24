@@ -7,35 +7,36 @@
       "choiceMode": "radio",
       "choices": [
         {
+          "value": "0",
+          "label": "<div>Location A</div>",
           "feedback": {
-            "type": "none",
-            "value": ""
-          },
-          "label": "",
-          "value": ""
-        },
-        {
-          "value": "",
-          "label": "",
-          "feedback": {
-            "type": "none",
-            "value": ""
+            "type": "custom",
+            "value": "this is demo feedback for label A"
           }
         },
         {
-          "value": "",
-          "label": "",
+          "value": "1",
+          "label": "<div>Location B</b></div>",
+		  "correct":true,
           "feedback": {
-            "type": "none",
-            "value": ""
+            "type": "custom",
+            "value": "this is demo feedback for label B"
           }
         },
         {
-          "value": "",
-          "label": "",
+          "value": "2",
+          "label": "<div>Location C</div>",
           "feedback": {
-            "type": "none",
-            "value": ""
+            "type": "custom",
+            "value": "this is demo feedback for label C"
+          }
+        },
+        {
+          "value": "3",
+          "label": "<div> A hurricane is equally likely to occur at any of these locations.</div>",
+          "feedback": {
+            "type": "custom",
+            "value": "this is demo feedback for label D"
           }
         }
       ],
