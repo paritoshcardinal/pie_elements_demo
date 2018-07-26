@@ -10,11 +10,31 @@
       "choices": [
         {
           "id": "1",
-          "content": "<h3>Hi</h3>"
+          "content": "<h3>Apple</h3>"
         },
         {
           "id": "2",
           "content": "<b>Banana</b>"
+        },
+		 {
+          "id": "3",
+          "content": "<h3>Grapes</h3>"
+        },
+        {
+          "id": "4",
+          "content": "<b>Carrot</b>"
+        },
+		 {
+          "id": "5",
+          "content": "<h3>Beans</h3>"
+        },
+        {
+          "id": "6",
+          "content": "<b>Eggplant</b>"
+        },
+		{
+          "id": "7",
+          "content": "<b>Egg</b>"
         }
       ],
       "categories": [
@@ -30,7 +50,11 @@
       "correctResponse": [
         {
           "category": "1",
-          "choices": [ "1", "2", "1" ]
+          "choices": [ "1", "2", "3" ]
+        },
+		{
+          "category": "2",
+          "choices": [ "4", "5", "6" ]
         }
       ],
       "scoring": {
