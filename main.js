@@ -39,18 +39,18 @@ function updateElement(model, id, updateConfig, elementName) {
           });
 		  
 
-		  configEl.addEventListener("insert.image", e => {
+		  /*configEl.addEventListener("insert.image", e => {
             this.handleFileSelect = this.handleFileSelect.bind(this);
 			this._insertImageHandler = e.detail;
 			this._$fileInput = window.document.querySelector('input[type="file"]');
 			this._$fileInput.click();
-          });
+          });*/
         }
       }
     });
 }
 
-function handleFileSelect(e) {
+/*function handleFileSelect(e) {
 	let b ="multiple-choice-configure[pie-id='" + id + "']";
     let configEl = window.document.querySelector(b);
     const file = event.target.files[0];
@@ -59,7 +59,7 @@ function handleFileSelect(e) {
     var reader = new FileReader();
     reader.onload = () => {
       const dataURL = reader.result;
-      /** simulate a delay in uploading */
+      /** simulate a delay in uploading 
       setTimeout(() => {
         configEl._insertImageHandler.done(null, dataURL);
         configEl._insertImageHandler = null;
@@ -77,7 +77,7 @@ function handleFileSelect(e) {
 
     log('[handleFileSelect] reader.readAsDataUrl, file:', file);
     reader.readAsDataURL(file);
-  }
+  }*/
   
   function connectedCallback() {
 	let b ="multiple-choice-configure[pie-id='" + id + "']";
