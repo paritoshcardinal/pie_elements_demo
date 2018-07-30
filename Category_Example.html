@@ -32,7 +32,7 @@
                 <td style="width:70%"><categorize-el-configure pie-id="2"></categorize-el-configure></td>
                 <td style="width:2%;background-color:#eee"></td>
                 <td style="vertical-align:top">
-                    <div>STUDENT VIEW <a href="javascript:none">Check Answer</a></div>
+                    <div>STUDENT VIEW &nbsp <span id="check-answer">Check Answer</span></div>
                     <categorize-el pie-id="2"> </categorize-el>
                 </td>
             </tr>
@@ -49,7 +49,32 @@
   <script src="./cat/cat_main.js"></script>
    <!---->
 
-  
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      document.querySelector("#check-answer").addEventListener('click', () => {
+        env = { mode: 'evaluate' }
+        const s = window.session.find(s => s.id === "2");
+        window['pie-controller-pie-item']["categorize-el"].model(window.mcModel, s, env)
+          .then(uiModel => {
+
+            const id = "2";
+            let a = "categorize-el[pie-id='" + id + "']";
+            let el = document.querySelector(a);
+            el.model = uiModel;
+          })
+      })
+    })
+    $.getJSON("./cat/config2.json", function (data) {
+      data.models.forEach((val) => {
+        const model = val;
+
+        window.mcModel = model;
+        renderPIE(window.mcModel, 'categorize-el');
+      });
+    });
+  </script>
   
 </body>
 
