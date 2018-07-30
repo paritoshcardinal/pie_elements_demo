@@ -16,7 +16,6 @@ function renderPIE(model, elementName) {
 }
 
 function updateElement(model, id, updateConfig, elementName) {
-
   const session = getSession(id);
   window["pie-controller-pie-item"][elementName]
     .model(model, session, { mode: "gather" })
@@ -37,59 +36,81 @@ function updateElement(model, id, updateConfig, elementName) {
           configEl.addEventListener("model.updated", e => {
             updateElement(e.detail.update, id, false, elementName);
           });
-		  
-
-		  /*configEl.addEventListener("insert.image", e => {
-            this.handleFileSelect = this.handleFileSelect.bind(this);
-			this._insertImageHandler = e.detail;
-			this._$fileInput = window.document.querySelector('input[type="file"]');
-			this._$fileInput.click();
-          });*/
         }
       }
     });
 }
 
-/*function handleFileSelect(e) {
-	let b ="multiple-choice-configure[pie-id='" + id + "']";
-    let configEl = window.document.querySelector(b);
+const whenReady = fn => {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      fn();
+    });
+  } else {
+    fn();
+  }
+};
+
+whenReady(() => {
+  /**
+   * adding image support for the rich text editors.
+   * This is done by handling the 'insert.image' and 'delete.image' events.
+   * These events are bubbled up from the configuration custom elements.
+   *
+   * It is up to you to handle these events and implement the file selection process etc.
+   *
+   * Here we use a hidden file input and once we've loaded the file we read a data url.
+   * This data url gets passed to the insert image handler in the `handler.done(null, url)` function.
+   */
+
+  const input = document.querySelector("#hidden-file-input");
+
+  let insertImageHandler = null;
+
+  const handleFileSelect = () => {
     const file = event.target.files[0];
-    configEl._insertImageHandler.fileChosen(file);
-    configEl._$fileInput.value = '';
+
+    if (!file) {
+      throw new Error("no file..");
+      return;
+    }
+
+    insertImageHandler.fileChosen(file);
+    input.value = "";
     var reader = new FileReader();
+
     reader.onload = () => {
+      console.log("loaded the file contents - send to the handler...");
       const dataURL = reader.result;
-      /** simulate a delay in uploading 
-      setTimeout(() => {
-        configEl._insertImageHandler.done(null, dataURL);
-        configEl._insertImageHandler = null;
-      }, 2000);
+      // tell the handler that we have a url and there was no error
+      insertImageHandler.done(null, dataURL);
+      // clear the ref
+      insertImageHandler = null;
     };
 
-    let progress = 0;
-    configEl._insertImageHandler.progress(progress);
-
-    range(1, 100).forEach(n => {
-      setTimeout(() => {
-        configEl._insertImageHandler.progress(n);
-      }, n * 20);
-    });
-
-    log('[handleFileSelect] reader.readAsDataUrl, file:', file);
+    console.log("reader.readAsDataUrl, file:", file);
     reader.readAsDataURL(file);
-  }*/
-  
-  function connectedCallback() {
-	let b ="multiple-choice-configure[pie-id='" + id + "']";
-    let configEl = window.document.querySelector(b);
-    configEl._$fileInput.addEventListener('change', this.handleFileSelect);
-  }
+  };
 
-  function disconnectedCallback() {
-	let b ="multiple-choice-configure[pie-id='" + id + "']";
-    let configEl = window.document.querySelector(b);
-    configEl._$fileInput.removeEventListener('change', this.handleFileSelect);
-  }
+  /**
+   * Add the change handler.
+   */
+  input.addEventListener("change", handleFileSelect);
 
+  /**
+   * Listen for the insert/delete image events.
+   * These events bubble so we can listen for them at the root of the object graph aka `document`.
+   * You could listen for them at a lower level if you want.
+   */
+  document.addEventListener("insert.image", event => {
+    //keep a reference to the handler so we call call functions on it once we're ready.
+    insertImageHandler = event.detail;
+    //trigger a click on the hidden file input, this triggers handleFileSelect above.
+    input.click();
+  });
 
-
+  document.addEventListener("delete.image", event => {
+    //just call the done function on the done handler.
+    event.detail.done();
+  });
+});
