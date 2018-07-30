@@ -17,6 +17,26 @@
       display: flex;
     }
   </style>
+  
+	<script src="./shims/webcomponents.polyfill-loader.js"></script>
+	<script type="text/javascript">
+
+		if ((thisBrowserType() == "isFirefox") || thisBrowserType() == "isEdge") {
+
+			loadJS('./shims/custom-elements.min.js');
+			loadJS('./shims/native-shim.js');
+
+		}
+		else if (thisBrowserType() == "isChrome" || thisBrowserType() == "isSafari") {
+			loadJS('./shims/custom-elements-es5-adapter.js')
+			loadJS('./shims/webcomponents-loader.js')
+			
+		}
+
+		loadJS('./shims/custom-event-polyfill.js')
+
+	</script>
+	
 </head>
 
 <body>
@@ -46,6 +66,8 @@
   </div>
   <!-- Multiple choice element end -->
 
+  
+  
   <script src="./jquery-1.11.1.min.js"></script>
   <script src="./main.js"></script>
   <script src="./pie/pie-configure.js"></script>
