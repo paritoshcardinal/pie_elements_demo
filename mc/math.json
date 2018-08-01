@@ -43,7 +43,7 @@
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<p>Which expression is equivalent to <span class=\"mf-mc-pml-pie\">$m+2m+4+2$</span> ?</p>",
+      "prompt": "<p>Which expression is equivalent to <span data-latex=\"\" class=\"mf-mc-pml-pie\">$m+2m+4+2$</span> ?</p> <div>Test MathML <span data-latex=\"\">\\(\\left(a+b\\right)^2=a^2+b^2+2ab\\)</span></div>",
       "showChoiceLabel": false
     }
   ]
