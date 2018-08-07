@@ -5,7 +5,7 @@
   "models": [
     {
       "choiceMode": "radio",
-	  "prompt":"this is demo prompt",
+	 "prompt": "<p>Wendy cut a board into&nbsp;<span data-latex=\"\">4</span> pieces of equal sizes to make a table. Which fraction of the whole board does each piece represent?</p>",
       "choices": [
         {
           "value": "0",
