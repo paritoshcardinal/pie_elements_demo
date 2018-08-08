@@ -64,7 +64,7 @@ whenReady(() => {
    */
 
   const input = document.querySelector("#hidden-file-input");
-
+if(input==null) return;
   let insertImageHandler = null;
 
   const handleFileSelect = () => {
