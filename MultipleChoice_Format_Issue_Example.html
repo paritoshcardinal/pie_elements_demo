@@ -28,9 +28,7 @@
 
 		}
 		else if (thisBrowserType() == "isChrome" || thisBrowserType() == "isSafari") {
-			loadJS('./shims/custom-elements-es5-adapter.js')
-			loadJS('./shims/webcomponents-loader.js')
-			
+			loadJS('./shims/webcomponents-loader.js')			
 		}
 
 		loadJS('./shims/custom-event-polyfill.js')
