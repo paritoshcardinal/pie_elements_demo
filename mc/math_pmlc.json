@@ -8,7 +8,7 @@
       "choices": [
         {
           "value": "0",
-          "label": "<span>\\(\\displaystyle - \\frac{11}{5}\\)</span>",
+          "label": "<div>Location A</div>",
           "feedback": {
             "type": "custom",
             "value": "this is demo feedback for label A"
@@ -16,7 +16,7 @@
         },
         {
           "value": "1",
-          "label": "<span>\\(\\displaystyle - \\frac{36}{55}\\)</span>",
+          "label": "<div>Location B</b></div>",
 		  "correct":true,
           "feedback": {
             "type": "custom",
@@ -25,7 +25,7 @@
         },
         {
           "value": "2",
-          "label": "<span>\\(\\displaystyle \\frac{36}{55}\\)</span>",
+          "label": "<div>Location C</div>",
           "feedback": {
             "type": "custom",
             "value": "this is demo feedback for label C"
@@ -33,7 +33,7 @@
         },
         {
           "value": "3",
-          "label": "<span>\\(\\displaystyle \\frac{11}{5}\\)</span>",
+          "label": "<div> A hurricane is equally likely to occur at any of these locations.</div>",
           "feedback": {
             "type": "custom",
             "value": "this is demo feedback for label D"
@@ -43,7 +43,7 @@
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<div class=\"item-body\">\n\n        <div class=\"para intro-2\">Divide.</div>\n        \n        <div class=\"para para-center\"><span>\\(\\displaystyle -1  \\frac{1}{5}  \\div \\displaystyle -1  \\frac{5}{6}\\)</span></div>\n        \n        \n            <div class=\"para prompt\"></div>\n            \n            \n            \n            \n        <div id=\"Q_01\" corespring-multiple-choice=\"\"></div>\n    </div>",
+      "prompt": "<p>Which expression is equivalent to <span data-latex=\"\" class=\"mf-mc-pml-pie\">$m+2m+4+2$</span> ?</p> <div>Test MathML <span data-latex=\"\">\\(\\left(a+b\\right)^2=a^2+b^2+2ab\\)</span></div>",
       "showChoiceLabel": false
     }
   ]
