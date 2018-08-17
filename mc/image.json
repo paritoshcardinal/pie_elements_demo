@@ -8,7 +8,7 @@
       "choices": [
         {
           "value": "0",
-          "label": "<div>​<div draggable=\"true\" contenteditable=\"false\" class=\"hand\"><img src=\"http://sbox.powermylearning.org/media/content/assets/userpromptimages/1526930002919-5b0319f5e4b07b2531f48856_A.PNG\"></div>​</div>",
+          "label": "<div draggable=\"true\" contenteditable=\"false\" class=\"hand\"><img src=\"http://sbox.powermylearning.org/media/content/assets/userpromptimages/1526930002919-5b0319f5e4b07b2531f48856_A.PNG\"></div>​",
           "feedback": {
             "type": "custom",
             "value": "this is demo feedback for label A"
