@@ -43,7 +43,7 @@
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<div><div><div>Which table highlights doubles?</div>​<div id=\"0\" corespring-multiple-choice=\"\"></div>​<div><br /></div></div></div>",
+      "prompt": "<div><div><div>Which table highlights doubles?</div>​​<div><br /></div></div></div>",
       "showChoiceLabel": false
     }
   ]

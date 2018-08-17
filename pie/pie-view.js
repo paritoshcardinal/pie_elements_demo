@@ -727,8 +727,8 @@ var withStyles = function withStyles(stylesOrCreator) {
         _this.theme = null;
         _this.unsubscribeId = null;
         _this.state = {};
-        _this.jss = _this.context[ns.jss] || jss;
-        var muiThemeProviderOptions = _this.context.muiThemeProviderOptions;
+        _this.jss = context[ns.jss] || jss;
+        var muiThemeProviderOptions = context.muiThemeProviderOptions;
 
         if (muiThemeProviderOptions) {
           if (muiThemeProviderOptions.sheetsManager) {
@@ -744,7 +744,7 @@ var withStyles = function withStyles(stylesOrCreator) {
         _this.stylesCreatorSaved = stylesCreator;
         _this.sheetOptions = (0, _objectSpread2.default)({
           generateClassName: generateClassName
-        }, _this.context[ns.sheetOptions]); // We use || as the function call is lazy evaluated.
+        }, context[ns.sheetOptions]); // We use || as the function call is lazy evaluated.
 
         _this.theme = listenToTheme ? _themeListener.default.initial(context) || getDefaultTheme() : noopTheme;
 
@@ -5177,7 +5177,7 @@ var withTheme = function withTheme() {
         var _this;
 
         (0, _classCallCheck2.default)(this, WithTheme);
-        _this = (0, _possibleConstructorReturn2.default)(this, (WithTheme.__proto__ || Object.getPrototypeOf(WithTheme)).call(this, props, context));
+        _this = (0, _possibleConstructorReturn2.default)(this, (WithTheme.__proto__ || Object.getPrototypeOf(WithTheme)).call(this));
         _this.unsubscribeId = null;
         _this.state = {};
         _this.state = {
@@ -28562,7 +28562,7 @@ function (_React$Component) {
     var _this;
 
     (0, _classCallCheck2.default)(this, SwitchBase);
-    _this = (0, _possibleConstructorReturn2.default)(this, (SwitchBase.__proto__ || Object.getPrototypeOf(SwitchBase)).call(this, props));
+    _this = (0, _possibleConstructorReturn2.default)(this, (SwitchBase.__proto__ || Object.getPrototypeOf(SwitchBase)).call(this));
     _this.input = null;
     _this.isControlled = null;
     _this.state = {};
@@ -54111,14 +54111,14 @@ function (_React$Component) {
     var _this;
 
     (0, _classCallCheck2.default)(this, MuiThemeProvider);
-    _this = (0, _possibleConstructorReturn2.default)(this, (MuiThemeProvider.__proto__ || Object.getPrototypeOf(MuiThemeProvider)).call(this, props, context)); // Get the outer theme from the context, can be null
+    _this = (0, _possibleConstructorReturn2.default)(this, (MuiThemeProvider.__proto__ || Object.getPrototypeOf(MuiThemeProvider)).call(this)); // Get the outer theme from the context, can be null
 
     _this.broadcast = (0, _brcast.default)();
     _this.unsubscribeId = null;
     _this.outerTheme = null;
     _this.outerTheme = _themeListener.default.initial(context); // Propagate the theme so it can be accessed by the children
 
-    _this.broadcast.setState(_this.mergeOuterLocalTheme(_this.props.theme));
+    _this.broadcast.setState(_this.mergeOuterLocalTheme(props.theme));
 
     return _this;
   }
@@ -69896,6 +69896,7 @@ function (_React$Component) {
           elevation = _props3.elevation,
           getContentAnchorEl = _props3.getContentAnchorEl,
           marginThreshold = _props3.marginThreshold,
+          ModalClasses = _props3.ModalClasses,
           onEnter = _props3.onEnter,
           onEntered = _props3.onEntered,
           onEntering = _props3.onEntering,
@@ -69909,7 +69910,7 @@ function (_React$Component) {
           TransitionComponent = _props3.TransitionComponent,
           transitionDurationProp = _props3.transitionDuration,
           TransitionProps = _props3.TransitionProps,
-          other = (0, _objectWithoutProperties2.default)(_props3, ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "classes", "container", "elevation", "getContentAnchorEl", "marginThreshold", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "open", "PaperProps", "role", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"]);
+          other = (0, _objectWithoutProperties2.default)(_props3, ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "classes", "container", "elevation", "getContentAnchorEl", "marginThreshold", "ModalClasses", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "open", "PaperProps", "role", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"]);
       var transitionDuration = transitionDurationProp;
 
       if (transitionDurationProp === 'auto' && !TransitionComponent.muiSupportAuto) {
@@ -69921,6 +69922,7 @@ function (_React$Component) {
 
       var container = containerProp || (anchorEl ? (0, _ownerDocument.default)(getAnchorEl(anchorEl)).body : undefined);
       return _react.default.createElement(_Modal.default, (0, _extends2.default)({
+        classes: ModalClasses,
         container: container,
         open: open,
         BackdropProps: {
@@ -70038,6 +70040,11 @@ Popover.propTypes = process.env.NODE_ENV !== "production" ? {
    * Specifies how close to the edge of the window the popover can appear.
    */
   marginThreshold: _propTypes.default.number,
+
+  /**
+   * `classes` property applied to the [`Modal`](/api/modal) element.
+   */
+  ModalClasses: _propTypes.default.object,
 
   /**
    * Callback fired when the component requests to be closed.
@@ -70163,8 +70170,7 @@ exports.default = _default;
  * @param {Boolean} whether to execute at the beginning (`false`)
  * @api public
  */
-
-module.exports = function debounce(func, wait, immediate){
+function debounce(func, wait, immediate){
   var timeout, args, context, timestamp, result;
   if (null == wait) wait = 100;
 
@@ -70215,6 +70221,11 @@ module.exports = function debounce(func, wait, immediate){
 
   return debounced;
 };
+
+// Adds compatibility for ES modules
+debounce.debounce = debounce;
+
+module.exports = debounce;
 
 
 /***/ }),
@@ -70540,7 +70551,7 @@ function (_React$Component) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Modal);
-    _this = (0, _possibleConstructorReturn2.default)(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, props));
+    _this = (0, _possibleConstructorReturn2.default)(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this));
     _this.mountNode = null;
     _this.modalRef = null;
     _this.dialogRef = null;
@@ -70635,7 +70646,7 @@ function (_React$Component) {
     };
 
     _this.state = {
-      exited: !_this.props.open
+      exited: !props.open
     };
     return _this;
   }
@@ -71019,8 +71030,8 @@ function setRef(ref, value) {
  * import RootRef from '@material-ui/core/RootRef';
  *
  * class MyComponent extends React.Component {
- *   constructor(props) {
- *     super(props);
+ *   constructor() {
+ *     super();
  *     this.domRef = React.createRef();
  *   }
  *
