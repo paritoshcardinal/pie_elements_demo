@@ -8,92 +8,41 @@
       "id": "2",
       "element": "categorize-element",
       "choices": [
-        {
-          "id": "1",
-          "content": "<h3>Apple</h3>"
-        },
-        {
-          "id": "2",
-          "content": "<b>Banana</b>"
-        },
-		 {
-          "id": "3",
-          "content": "<h3>Grapes</h3>"
-        },
-        {
-          "id": "4",
-          "content": "<b>Carrot</b>"
-        },
-		 {
-          "id": "5",
-          "content": "<h3>Beans</h3>"
-        },
-        {
-          "id": "6",
-          "content": "<b>Eggplant</b>"
-        },
-		{
-          "id": "7",
-          "content": "<b>Egg</b>"
-        }
-      ],
-      "categories": [
-        {
-          "id": "1",
-          "label": "Fruit"
-        },
-        {
-          "id": "2",
-          "label": "Vegetable"
-        }
-      ],
+			{
+			  "id": "0",
+			  "content": "<p><img src='http://sbox.powermylearning.org/media/content/assets/userpromptimages/c689e38a-2940-46f6-aa31-e3a03000ea7f_07a.jpg'/></p>",
+			  "categoryCount": 1
+			},
+			{
+			  "id": "1",
+			  "content": "<span><img src=\"http://sbox.powermylearning.org/media/content/assets/userpromptimages/c689e38a-2940-46f6-aa31-e3a03000ea7f_07b.jpg \"/></span>",
+			  "categoryCount": 1
+			},
+			{
+			  "id": "2",
+			  "content": "<div><img src=\"http://sbox.powermylearning.org/media/content/assets/userpromptimages/c689e38a-2940-46f6-aa31-e3a03000ea7f_07c.jpg \"/></div>",
+			  "categoryCount": 1
+			},
+			{
+			  "id": "3",
+			  "content": "<div><img src=\"http://sbox.powermylearning.org/media/content/assets/userpromptimages/c689e38a-2940-46f6-aa31-e3a03000ea7f_07d.jpg \"/></div>",
+			  "categoryCount": 1
+			}
+		  ],
+        "categories": [
+			{
+			  "id": "0",
+			  "label": "<span cardinality=\"single\" id=\"target1\" identifier=\"target1\" label=\"Answer Box\" landing-place=\"landing-place\"/> test123"
+			}
+		  ],
       "correctResponse": [
-        {
-          "category": "1",
-          "choices": [ "1", "2", "3" ]
-        },
-		{
-          "category": "2",
-          "choices": [ "4", "5", "6" ]
-        }
-      ],
-      "scoring": {
-        "weighting": {
-          "enabled": true,
-          "rules": [
-            {
-              "category": "1",
-              "points": 1
-            },
-            {
-              "category": "2",
-              "points": 1
-            }
-          ]
-        },
-        "partial": {
-          "enabled": true,
-          "rules": [
-            {
-              "category": "1",
-              "rules": [
-                {
-                  "count": 1,
-                  "percent": 50
-                },
-                {
-                  "count": 2,
-                  "percent": 100
-                }
-              ]
-            },
-            {
-              "category": "2",
-              "rules": []
-            }
-          ]
-        }
-      },
+			{
+			  "category": 0,
+			  "choices": [
+				"0"
+			  ]
+			}
+		  ],
       "config": {
         "choices": {
           "columns": 2,
@@ -102,7 +51,7 @@
           "shuffle": false
         },
         "categories": {
-          "columns": 2
+          "columns": 0
         }
       }
     }
