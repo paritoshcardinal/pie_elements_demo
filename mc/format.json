@@ -5,7 +5,7 @@
   "models": [
     {
       "choiceMode": "radio",
-	 "prompt": "<div>This example for all format issue.</br> <b>This line is in Bold format using 'b' tag.</b></div>",
+	 "prompt": "<div class=\"para em\">Read and think about the list below to answer question 34.</div>\n<table width=\"300\" border=\"1\" cellspacing=\"0\" cellpadding=\"4\">\n <tbody>\n  <tr align=\"left\" valign=\"top\">\n   <td>\n    <ul type=\"disc\">\n     <li>direct governmental control over industry and trade</li>\n     <li>national wealth based upon the possession of gold and silver</li>\n     <li>establishment and exploitation of colonies</li>\n    </ul></td>\n  </tr>\n </tbody>\n</table>\n<div class=\"para\">With which economic term is the list above <strong>most</strong> closely associated?</div><div></div>",
       "choices": [
         {
           "value": "0",
@@ -17,7 +17,7 @@
         },
         {
           "value": "1",
-          "label": "<div> this is demo label B</div>",
+          "label": "<div>This example for all format issue.</br> <b>This line is in Bold format using 'b' tag.</b></div>",
 		  "correct":true,
           "feedback": {
             "type": "custom",
