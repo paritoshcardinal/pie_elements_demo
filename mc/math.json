@@ -6,44 +6,47 @@
     {
       "choiceMode": "radio",
       "choices": [
-        {
-          "value": "0",
-          "label": "<span>\\(\\displaystyle - \\frac{11}{5}\\)</span>",
-          "feedback": {
-            "type": "custom",
-            "value": "this is demo feedback for label A"
-          }
-        },
-        {
-          "value": "1",
-          "label": "<span>\\(\\displaystyle - \\frac{36}{55}\\)</span>",
-		  "correct":true,
-          "feedback": {
-            "type": "custom",
-            "value": "this is demo feedback for label B"
-          }
-        },
-        {
-          "value": "2",
-          "label": "<span>\\(\\displaystyle \\frac{36}{55}\\)</span>",
-          "feedback": {
-            "type": "custom",
-            "value": "this is demo feedback for label C"
-          }
-        },
-        {
-          "value": "3",
-          "label": "<span>\\(\\displaystyle \\frac{11}{5}\\)</span>",
-          "feedback": {
-            "type": "custom",
-            "value": "this is demo feedback for label D"
-          }
-        }
-      ],
+		{
+		  "correct": false,
+		  "value": "0",
+		  "label": "<div><span data-latex=\"\">\\(\\frac{1}{5}\\)</span> of a scarf</div>",
+		  "feedback": {
+			"type": "custom",
+			"value": "<div>Your Answer</div>"
+		  }
+		},
+		{
+		  "correct": true,
+		  "value": "1",
+		  "label": "<div><span data-latex=\"\">\\(\\frac{1}{8}\\)</span> of a scarf</div>",
+		  "feedback": {
+			"type": "custom",
+			"value": "<div>Correct Answer</div>"
+		  }
+		},
+		{
+		  "correct": false,
+		  "value": "2",
+		  "label": "<div><span data-latex=\"\">\\(\\frac{9}{10}\\)</span> of a scarf</div>",
+		  "feedback": {
+			"type": "custom",
+			"value": "<div>Your Answer</div>"
+		  }
+		},
+		{
+		  "correct": false,
+		  "value": "3",
+		  "label": "<div><span data-latex=\"\">\\(\\frac{2}{25}\\)</span> of a scarf</div>",
+		  "feedback": {
+			"type": "custom",
+			"value": "<div>Your Answer</div>"
+		  }
+		}
+	  ],
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<div class=\"item-body\">\n\n        <div class=\"para intro-2\">Divide.</div>\n        \n        <div class=\"para para-center\"><span>\\(\\displaystyle -1  \\frac{1}{5}  \\div \\displaystyle -1  \\frac{5}{6}\\)</span></div>\n        \n        \n            <div class=\"para prompt\"></div>\n            \n            \n            \n            \n        <div id=\"Q_01\" corespring-multiple-choice=\"\"></div>\n    </div>",
+      "prompt": "<div class=\"item-body\">\n\n        <div class=\"para intro-2\">Amy knits <span data-latex=\"\">\\displaystyle\\frac{1}{10}</span> of a scarf in <span data-latex=\"\">\\displaystyle\\frac{4}{5}</span> of an hour. </div>\n        \n        \n            <div class=\"para prompt\">What fraction of a scarf can Amy knit in 1 hour?</div>\n            \n            \n            \n            \n        <div></div>\n    </div>",
       "showChoiceLabel": false
     }
   ]
