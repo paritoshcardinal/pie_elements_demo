@@ -43,7 +43,7 @@
       "element": "multiple-choice-configure",
       "id": "1",
       "keyMode": "letters",
-      "prompt": "<div><div><div>Which table highlights doubles?</div>​​<div><br /></div></div></div>",
+      "prompt": "<div>Which is greater, 0.2 or 0.03? Use the number line below to help you.<div style=\"text-align: left;\"><img  src=\"http://qa-media.powermylearning.org/content/assets/userpromptimages/1b7730d6-f945-4cb1-9925-0e1ab6a6b6f3_1534792362356-Screen%20Shot%202018-08-20%20at%203.06.17%20PM.png\"></div>​​<div></div></div>",
       "showChoiceLabel": false
     }
   ]
