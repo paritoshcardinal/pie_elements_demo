@@ -1,48 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=624">
+<meta name="viewport" content="widtd=624">
 <title>Dynamic Table Demo</title>
 
 <style type="text/css">
-table{
-border-collapse:collapse;
-border:1px solid #000000;
+
+table.master {
+	width: 100%;
 }
 
-table td{
-border:1px solid #000000;
+table.staff-table {
+	border:1px solid #c5bcbc;
+	width: 100%;
+	border-collapse: collapse;
 }
+
+table.staff-table td{
+	border:1px solid #c5bcbc;
+}
+
 </style>
 
 </head>
 <body>
 <div id="main">
-	<p>Paste excel data here:</p>
-	<textarea name="excel_data" style="width:250px;height:150px;"></textarea><br>
+	<p>Paste Student Information in Bulk: Download our <a href="javascript:void(0)">template</a></p>
+	<textarea name="excel_data" style="widtd:250px;height:150px;"></textarea><br>
 	<input type="button" onclick="javascript:generateTable()" value="Genereate Table"/>
 	<br><br>
 		<p>Table data will appear below</p>
 	<hr>
-	<div id="excel_table"></div>
+	<div>
+		<table class="master">
+			<tr>
+				<td width="40%">Student Information</td><td width="60%">Family Partner Information</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table id="excel_table" class="staff-table">
+						<thead>
+							<tr>
+								<td width="10%">
+									First Name
+								</td>
+								<td width="10%">
+									Last Name
+								</td>
+								<td width="10%">
+									Date of Birth
+								</td>
+								<td width="10%">
+									Username
+								</td>
+								<td width="12%">
+									First Name</td>
+								<td width="12%">
+								    Last Name
+								</td>
+								<td width="12%">
+								   Mobile Number
+								</td>
+								<td width="12%">
+								   Email
+								</td>
+								<td width="12%">
+									Home Language
+								</td>
+							</tr>
+						</thead>
+					</table>
+				</td> 
+			</tr>
+		</table>
+			
+	</div>
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 /*
 document.querySelector('#dynamicTable').addEventListener('paste', (e) => {
-  // Prevent the default pasting event and stop bubbling
+  // Prevent tde default pasting event and stop bubbling
   e.preventDefault();
   e.stopPropagation();
 let a=e.clipboardData;
 let b=window.clipboardData;
 debugger
-  // Get the clipboard data
+  // Get tde clipboard data
   let paste = (e.clipboardData || window.clipboardData).getData('text');
   var clipRows=[];
   clipRows=paste.split("/n");
   console.log(clipRows)
 	setTimeout(() => {
-			for (let i=0; i<clipRows.length; i++) {
+			for (let i=0; i<clipRows.lengtd; i++) {
 		        clipRows[i] = clipRows[i].split(String.fromCharCode(9));
 		    }
 	});
@@ -50,25 +100,26 @@ debugger
     
 
   
-  // Do something with paste like remove non-UTF-8 characters
+  // Do sometding witd paste like remove non-UTF-8 characters
   paste = paste.replace(/[^\x20-\xFF]/gi, '');
 
-  // Find the cursor location or highlighted area
+  // Find tde cursor location or highlighted area
   const selection = window.getSelection();
 
-  // Cancel the paste operation if the cursor or highlighted area isn't found
+  // Cancel tde paste operation if tde cursor or highlighted area isn't found
   if (!selection.rangeCount) return false;
 
-  // Paste the modified clipboard content where it was intended to go
+  // Paste tde modified clipboard content where it was intended to go
   selection.getRangeAt(0).insertNode(document.createTextNode(paste));
 });
 */
 function generateTable() {
     var data = $('textarea[name=excel_data]').val();
-    console.log(data);
+    //console.log(data);
 	var rows = data.split("\n");
-	var table = $('<table />');
-	for(var y in rows) {
+	var table = $('#excel_table');
+	table.empty();// remove all the table row
+	for(var y=0;y<rows.length-1;y++) {
 		var cells = rows[y].split("\t");
 		var row = $('<tr />');
 		for(var x in cells) {
@@ -76,8 +127,6 @@ function generateTable() {
 		}
 		table.append(row);
 	}
-	// Insert into DOM
-	$('#excel_table').html(table);
 }
 </script>
 </body>
