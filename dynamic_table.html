@@ -78,41 +78,48 @@ table.staff-table td{
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
-/*
-document.querySelector('#dynamicTable').addEventListener('paste', (e) => {
-  // Prevent tde default pasting event and stop bubbling
-  e.preventDefault();
+document.querySelector('#excel_table').addEventListener('paste', (e) => {
+  // Prevent the default pasting event and stop bubbling
+  //debugger
+  //e.preventhefault();
   e.stopPropagation();
 let a=e.clipboardData;
 let b=window.clipboardData;
-debugger
-  // Get tde clipboard data
+  // Get the clipboard data
   let paste = (e.clipboardData || window.clipboardData).getData('text');
-  var clipRows=[];
+  /*var clipRows=[];
   clipRows=paste.split("/n");
   console.log(clipRows)
 	setTimeout(() => {
 			for (let i=0; i<clipRows.lengtd; i++) {
 		        clipRows[i] = clipRows[i].split(String.fromCharCode(9));
 		    }
-	});
-	console.log(clipRows)
-    
+	});*/
+    var rows = paste.split("\n");
+	var table = $('#excel_table');
+	table.empty();// remove all the table row
+	for(var y=0;y<rows.length-1;y++) {
+		var cells = rows[y].split("\t");
+		var row = $('<tr />');
+		for(var x in cells) {
+			row.append('<td contenteditable="true">'+cells[x]+'</td>');
+		}
+		table.append(row);
+	}
 
   
   // Do sometding witd paste like remove non-UTF-8 characters
   paste = paste.replace(/[^\x20-\xFF]/gi, '');
 
-  // Find tde cursor location or highlighted area
+  // Find the cursor location or highlighted area
   const selection = window.getSelection();
 
-  // Cancel tde paste operation if tde cursor or highlighted area isn't found
+  // Cancel the paste operation if the cursor or highlighted area isn't found
   if (!selection.rangeCount) return false;
 
-  // Paste tde modified clipboard content where it was intended to go
-  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+  // Paste the modified clipboard content where it was intended to go
+  //selection.getRangeAt(0).insertNode(document.createTextNode(paste));
 });
-*/
 function generateTable() {
     var data = $('textarea[name=excel_data]').val();
     //console.log(data);
@@ -127,6 +134,8 @@ function generateTable() {
 		}
 		table.append(row);
 	}
+	// Insert into DOM
+	//$('#excel_table').html(table);
 }
 </script>
 </body>
