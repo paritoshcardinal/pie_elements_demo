@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=624">
+<title>Dynamic Table Demo</title>
+
+<style type="text/css">
+table{
+border-collapse:collapse;
+border:1px solid #000000;
+}
+
+table td{
+border:1px solid #000000;
+}
+</style>
+
+</head>
+<body>
+<div id="main">
+	<p>Paste excel data here:</p>
+	<textarea name="excel_data" style="width:250px;height:150px;"></textarea><br>
+	<input type="button" onclick="javascript:generateTable()" value="Genereate Table"/>
+	<br><br>
+		<p>Table data will appear below</p>
+	<hr>
+	<div id="excel_table"></div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+/*
+document.querySelector('#dynamicTable').addEventListener('paste', (e) => {
+  // Prevent the default pasting event and stop bubbling
+  e.preventDefault();
+  e.stopPropagation();
+let a=e.clipboardData;
+let b=window.clipboardData;
+debugger
+  // Get the clipboard data
+  let paste = (e.clipboardData || window.clipboardData).getData('text');
+  var clipRows=[];
+  clipRows=paste.split("/n");
+  console.log(clipRows)
+	setTimeout(() => {
+			for (let i=0; i<clipRows.length; i++) {
+		        clipRows[i] = clipRows[i].split(String.fromCharCode(9));
+		    }
+	});
+	console.log(clipRows)
+    
+
+  
+  // Do something with paste like remove non-UTF-8 characters
+  paste = paste.replace(/[^\x20-\xFF]/gi, '');
+
+  // Find the cursor location or highlighted area
+  const selection = window.getSelection();
+
+  // Cancel the paste operation if the cursor or highlighted area isn't found
+  if (!selection.rangeCount) return false;
+
+  // Paste the modified clipboard content where it was intended to go
+  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+});
+*/
+function generateTable() {
+    var data = $('textarea[name=excel_data]').val();
+    console.log(data);
+	var rows = data.split("\n");
+	var table = $('<table />');
+	for(var y in rows) {
+		var cells = rows[y].split("\t");
+		var row = $('<tr />');
+		for(var x in cells) {
+			row.append('<td contenteditable="true">'+cells[x]+'</td>');
+		}
+		table.append(row);
+	}
+	// Insert into DOM
+	$('#excel_table').html(table);
+}
+</script>
+</body>
+</html>
