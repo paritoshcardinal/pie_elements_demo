@@ -101,8 +101,9 @@ let b=window.clipboardData;
 	for(var y=0;y<rows.length-1;y++) {
 		var cells = rows[y].split("\t");
 		var row = $('<tr />');
-		for(var x in cells) {
-			row.append('<td contenteditable="true">'+cells[x]+'</td>');
+		for(var x=0;x<=8;x++) {
+		var t=typeof cells[x]==='undefined'?"":cells[x];
+			row.append('<td contenteditable="true">'+t+'</td>');
 		}
 		table.append(row);
 	}
@@ -129,8 +130,9 @@ function generateTable() {
 	for(var y=0;y<rows.length-1;y++) {
 		var cells = rows[y].split("\t");
 		var row = $('<tr />');
-		for(var x in cells) {
-			row.append('<td contenteditable="true">'+cells[x]+'</td>');
+		for(var x=0;x<=8;x++) {
+		var t=typeof cells[x]==='undefined'?"":cells[x];
+			row.append('<td contenteditable="true">'+t+'</td>');
 		}
 		table.append(row);
 	}
