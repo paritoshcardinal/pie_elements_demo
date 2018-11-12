@@ -70,14 +70,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 58);
+/******/ 	return __webpack_require__(__webpack_require__.s = 57);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(37);
+var freeGlobal = __webpack_require__(36);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -265,7 +265,7 @@ module.exports = Symbol;
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(41),
+var arrayLikeKeys = __webpack_require__(40),
     baseKeys = __webpack_require__(102),
     isArrayLike = __webpack_require__(17);
 
@@ -667,8 +667,8 @@ module.exports = getMapData;
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(39),
-    baseAssignValue = __webpack_require__(40);
+var assignValue = __webpack_require__(38),
+    baseAssignValue = __webpack_require__(39);
 
 /**
  * Copies properties of `source` to `object`.
@@ -744,7 +744,7 @@ module.exports = isIndex;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(36),
+var isFunction = __webpack_require__(35),
     isLength = __webpack_require__(24);
 
 /**
@@ -789,7 +789,7 @@ var DataView = __webpack_require__(113),
     Set = __webpack_require__(115),
     WeakMap = __webpack_require__(116),
     baseGetTag = __webpack_require__(5),
-    toSource = __webpack_require__(38);
+    toSource = __webpack_require__(37);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -1065,7 +1065,7 @@ module.exports = baseUnary;
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(37);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(36);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -1127,7 +1127,7 @@ module.exports = isPrototype;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(110),
-    stubArray = __webpack_require__(46);
+    stubArray = __webpack_require__(45);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -1162,7 +1162,7 @@ module.exports = getSymbols;
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Uint8Array = __webpack_require__(52);
+var Uint8Array = __webpack_require__(51);
 
 /**
  * Creates a clone of `arrayBuffer`.
@@ -1343,43 +1343,6 @@ module.exports = isSymbol;
 
 /***/ }),
 /* 35 */
-/***/ (function(module, exports) {
-
-/**
- * Creates an array with all falsey values removed. The values `false`, `null`,
- * `0`, `""`, `undefined`, and `NaN` are falsey.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Array
- * @param {Array} array The array to compact.
- * @returns {Array} Returns the new array of filtered values.
- * @example
- *
- * _.compact([0, 1, false, 2, '', 3]);
- * // => [1, 2, 3]
- */
-function compact(array) {
-  var index = -1,
-      length = array == null ? 0 : array.length,
-      resIndex = 0,
-      result = [];
-
-  while (++index < length) {
-    var value = array[index];
-    if (value) {
-      result[resIndex++] = value;
-    }
-  }
-  return result;
-}
-
-module.exports = compact;
-
-
-/***/ }),
-/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(5),
@@ -1422,7 +1385,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -1433,7 +1396,7 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(77)))
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -1465,10 +1428,10 @@ module.exports = toSource;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(40),
+var baseAssignValue = __webpack_require__(39),
     eq = __webpack_require__(12);
 
 /** Used for built-in method references. */
@@ -1499,7 +1462,7 @@ module.exports = assignValue;
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(96);
@@ -1530,15 +1493,15 @@ module.exports = baseAssignValue;
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseTimes = __webpack_require__(98),
-    isArguments = __webpack_require__(42),
+    isArguments = __webpack_require__(41),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(22),
     isIndex = __webpack_require__(16),
-    isTypedArray = __webpack_require__(43);
+    isTypedArray = __webpack_require__(42);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -1585,7 +1548,7 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsArguments = __webpack_require__(99),
@@ -1627,7 +1590,7 @@ module.exports = isArguments;
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsTypedArray = __webpack_require__(101),
@@ -1660,7 +1623,7 @@ module.exports = isTypedArray;
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 /**
@@ -1681,10 +1644,10 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(41),
+var arrayLikeKeys = __webpack_require__(40),
     baseKeysIn = __webpack_require__(105),
     isArrayLike = __webpack_require__(17);
 
@@ -1719,7 +1682,7 @@ module.exports = keysIn;
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 /**
@@ -1748,13 +1711,13 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(48),
-    getPrototype = __webpack_require__(49),
+var arrayPush = __webpack_require__(47),
+    getPrototype = __webpack_require__(48),
     getSymbols = __webpack_require__(28),
-    stubArray = __webpack_require__(46);
+    stubArray = __webpack_require__(45);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -1779,7 +1742,7 @@ module.exports = getSymbolsIn;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
 /**
@@ -1805,10 +1768,10 @@ module.exports = arrayPush;
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(44);
+var overArg = __webpack_require__(43);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -1817,10 +1780,10 @@ module.exports = getPrototype;
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(51),
+var baseGetAllKeys = __webpack_require__(50),
     getSymbols = __webpack_require__(28),
     keys = __webpack_require__(7);
 
@@ -1839,10 +1802,10 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(48),
+var arrayPush = __webpack_require__(47),
     isArray = __webpack_require__(1);
 
 /**
@@ -1865,7 +1828,7 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(0);
@@ -1877,7 +1840,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseMatches = __webpack_require__(130),
@@ -1914,7 +1877,7 @@ module.exports = baseIteratee;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var SetCache = __webpack_require__(133),
@@ -2003,7 +1966,7 @@ module.exports = equalArrays;
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(3);
@@ -2024,7 +1987,7 @@ module.exports = isStrictComparable;
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports) {
 
 /**
@@ -2050,7 +2013,7 @@ module.exports = matchesStrictComparable;
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsEqual = __webpack_require__(30);
@@ -2091,14 +2054,14 @@ module.exports = isEqual;
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports['categorize-el'] = __webpack_require__(59);
-exports['multiple-choice'] = __webpack_require__(173);
+exports['categorize-el'] = __webpack_require__(58);
+exports['multiple-choice'] = __webpack_require__(174);
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2107,9 +2070,11 @@ exports['multiple-choice'] = __webpack_require__(173);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.outcome = exports.model = undefined;
+exports.outcome = exports.model = exports.getCorrectness = exports.score = undefined;
 
-var _categorize = __webpack_require__(60);
+var _categorize = __webpack_require__(59);
+
+var _feedback = __webpack_require__(173);
 
 var _debug = __webpack_require__(9);
 
@@ -2119,24 +2084,59 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const log = (0, _debug2.default)('@pie-element:categorize:controller');
 
-const model = exports.model = (question, session, env) => new Promise(resolve => {
-  const out = {
-    choices: question.choices,
-    categories: question.categories,
-    disabled: env.mode !== 'gather',
-    config: question.config || {
-      choices: {
-        columns: 2
-      },
-      categories: {
-        columns: 2
-      }
+exports.score = _categorize.score;
+const getCorrectness = exports.getCorrectness = (question, session, env) => {
+  return new Promise(resolve => {
+    if (env.mode === 'evaluate') {
+      const state = (0, _categorize.buildState)(question.categories, question.choices, session.answers, question.correctResponse);
+      log('state: ', state);
+
+      const scorePromise = (0, _categorize.score)(state.categories, question.scoring || {});
+
+      scorePromise.then(scoreInfo => {
+        if (scoreInfo.score === 1) {
+          resolve('correct');
+        } else if (scoreInfo.score === 0) {
+          resolve('incorrect');
+        } else {
+          resolve('partially-correct');
+        }
+      });
+    } else {
+      resolve(undefined);
     }
-  };
+  });
+};
 
-  out.correctResponse = env.mode === 'evaluate' ? question.correctResponse : undefined;
+const model = exports.model = (question, session, env) => new Promise(resolve => {
+  const correctPromise = getCorrectness(question, session, env);
 
-  resolve(out);
+  correctPromise.then(correctness => {
+    const fb = env.mode === 'evaluate' ? (0, _feedback.getFeedbackForCorrectness)(correctness, question.feedback) : Promise.resolve(undefined);
+
+    fb.then(feedback => {
+      const out = {
+        correctness,
+        feedback,
+        scoring: question.scoring,
+        choices: question.choices,
+        categories: question.categories,
+        disabled: env.mode !== 'gather',
+        config: question.config || {
+          choices: {
+            columns: 2
+          },
+          categories: {
+            columns: 2
+          }
+        }
+      };
+
+      out.correctResponse = env.mode === 'evaluate' ? question.correctResponse : undefined;
+
+      resolve(out);
+    });
+  });
 });
 
 const outcome = exports.outcome = (question, session, env) => {
@@ -2150,7 +2150,7 @@ const outcome = exports.outcome = (question, session, env) => {
 };
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2163,7 +2163,7 @@ exports.buildState = exports.moveChoiceToCategory = exports.removeChoiceFromCate
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _compact = __webpack_require__(35);
+var _compact = __webpack_require__(60);
 
 var _compact2 = _interopRequireDefault(_compact);
 
@@ -2179,7 +2179,7 @@ var _remove = __webpack_require__(129);
 
 var _remove2 = _interopRequireDefault(_remove);
 
-var _isEqual = __webpack_require__(57);
+var _isEqual = __webpack_require__(56);
 
 var _isEqual2 = _interopRequireDefault(_isEqual);
 
@@ -2498,6 +2498,43 @@ var buildState = exports.buildState = function buildState(categories, choices) {
 };
 
 /***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+/**
+ * Creates an array with all falsey values removed. The values `false`, `null`,
+ * `0`, `""`, `undefined`, and `NaN` are falsey.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to compact.
+ * @returns {Array} Returns the new array of filtered values.
+ * @example
+ *
+ * _.compact([0, 1, false, 2, '', 3]);
+ * // => [1, 2, 3]
+ */
+function compact(array) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+
+  while (++index < length) {
+    var value = array[index];
+    if (value) {
+      result[resIndex++] = value;
+    }
+  }
+  return result;
+}
+
+module.exports = compact;
+
+
+/***/ }),
 /* 61 */
 /***/ (function(module, exports) {
 
@@ -2758,13 +2795,13 @@ function setup(env) {
     var prevTime;
 
     function debug() {
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
       // Disabled?
       if (!debug.enabled) {
         return;
+      }
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
       }
 
       var self = debug; // Set `diff` timestamp
@@ -3159,14 +3196,14 @@ module.exports = clone;
 
 var Stack = __webpack_require__(19),
     arrayEach = __webpack_require__(95),
-    assignValue = __webpack_require__(39),
+    assignValue = __webpack_require__(38),
     baseAssign = __webpack_require__(97),
     baseAssignIn = __webpack_require__(104),
     cloneBuffer = __webpack_require__(107),
     copyArray = __webpack_require__(108),
     copySymbols = __webpack_require__(109),
     copySymbolsIn = __webpack_require__(111),
-    getAllKeys = __webpack_require__(50),
+    getAllKeys = __webpack_require__(49),
     getAllKeysIn = __webpack_require__(112),
     getTag = __webpack_require__(18),
     initCloneArray = __webpack_require__(117),
@@ -3598,10 +3635,10 @@ module.exports = stackSet;
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(36),
+var isFunction = __webpack_require__(35),
     isMasked = __webpack_require__(80),
     isObject = __webpack_require__(3),
-    toSource = __webpack_require__(38);
+    toSource = __webpack_require__(37);
 
 /**
  * Used to match `RegExp`
@@ -4379,7 +4416,7 @@ module.exports = baseKeys;
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(44);
+var overArg = __webpack_require__(43);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -4392,7 +4429,7 @@ module.exports = nativeKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(15),
-    keysIn = __webpack_require__(45);
+    keysIn = __webpack_require__(44);
 
 /**
  * The base implementation of `_.assignIn` without support for multiple sources
@@ -4601,7 +4638,7 @@ module.exports = arrayFilter;
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(15),
-    getSymbolsIn = __webpack_require__(47);
+    getSymbolsIn = __webpack_require__(46);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -4622,9 +4659,9 @@ module.exports = copySymbolsIn;
 /* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(51),
-    getSymbolsIn = __webpack_require__(47),
-    keysIn = __webpack_require__(45);
+var baseGetAllKeys = __webpack_require__(50),
+    getSymbolsIn = __webpack_require__(46),
+    keysIn = __webpack_require__(44);
 
 /**
  * Creates an array of own and inherited enumerable property names and
@@ -4904,7 +4941,7 @@ module.exports = cloneTypedArray;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseCreate = __webpack_require__(124),
-    getPrototype = __webpack_require__(49),
+    getPrototype = __webpack_require__(48),
     isPrototype = __webpack_require__(27);
 
 /**
@@ -5077,7 +5114,7 @@ module.exports = baseIsSet;
 /* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIteratee = __webpack_require__(53),
+var baseIteratee = __webpack_require__(52),
     basePullAt = __webpack_require__(158);
 
 /**
@@ -5138,7 +5175,7 @@ module.exports = remove;
 
 var baseIsMatch = __webpack_require__(131),
     getMatchData = __webpack_require__(142),
-    matchesStrictComparable = __webpack_require__(56);
+    matchesStrictComparable = __webpack_require__(55);
 
 /**
  * The base implementation of `_.matches` which doesn't clone `source`.
@@ -5233,13 +5270,13 @@ module.exports = baseIsMatch;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(19),
-    equalArrays = __webpack_require__(54),
+    equalArrays = __webpack_require__(53),
     equalByTag = __webpack_require__(138),
     equalObjects = __webpack_require__(141),
     getTag = __webpack_require__(18),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(22),
-    isTypedArray = __webpack_require__(43);
+    isTypedArray = __webpack_require__(42);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -5448,9 +5485,9 @@ module.exports = cacheHas;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(6),
-    Uint8Array = __webpack_require__(52),
+    Uint8Array = __webpack_require__(51),
     eq = __webpack_require__(12),
-    equalArrays = __webpack_require__(54),
+    equalArrays = __webpack_require__(53),
     mapToArray = __webpack_require__(139),
     setToArray = __webpack_require__(140);
 
@@ -5613,7 +5650,7 @@ module.exports = setToArray;
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(50);
+var getAllKeys = __webpack_require__(49);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -5708,7 +5745,7 @@ module.exports = equalObjects;
 /* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(55),
+var isStrictComparable = __webpack_require__(54),
     keys = __webpack_require__(7);
 
 /**
@@ -5742,8 +5779,8 @@ var baseIsEqual = __webpack_require__(30),
     get = __webpack_require__(144),
     hasIn = __webpack_require__(151),
     isKey = __webpack_require__(33),
-    isStrictComparable = __webpack_require__(55),
-    matchesStrictComparable = __webpack_require__(56),
+    isStrictComparable = __webpack_require__(54),
+    matchesStrictComparable = __webpack_require__(55),
     toKey = __webpack_require__(8);
 
 /** Used to compose bitmasks for value comparisons. */
@@ -6124,7 +6161,7 @@ module.exports = baseHasIn;
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(32),
-    isArguments = __webpack_require__(42),
+    isArguments = __webpack_require__(41),
     isArray = __webpack_require__(1),
     isIndex = __webpack_require__(16),
     isLength = __webpack_require__(24),
@@ -6431,7 +6468,7 @@ module.exports = baseSlice;
 
 var arrayEvery = __webpack_require__(164),
     baseEvery = __webpack_require__(165),
-    baseIteratee = __webpack_require__(53),
+    baseIteratee = __webpack_require__(52),
     isArray = __webpack_require__(1),
     isIterateeCall = __webpack_require__(171);
 
@@ -6856,19 +6893,94 @@ var score = exports.score = function score(categories, scoring) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var defaults = exports.defaults = {
+  correct: { type: 'default', default: 'Correct', custom: 'Correct' },
+  incorrect: { type: 'default', default: 'Incorrect', custom: 'Incorrect' },
+  partial: { type: 'default', default: 'Nearly', custom: 'Nearly' },
+  unanswered: {
+    type: 'default',
+    default: 'You have not entered a response',
+    custom: 'You have not entered a response'
+  }
+};
+
+/**
+ * @typedef {Object} FeedbackConfig
+ * @property {'default'|'none'|'custom'} type
+ * @property {string} default
+ * @property {string} custom
+ *
+ * @typedef {Object} Feedback
+ *  @property {FeedbackConfig} correct
+ *  @property {FeedbackConfig} incorrect
+ *  @property {FeedbackConfig} partial
+ */
+
+var normalizeCorrectness = function normalizeCorrectness(c) {
+  if (c === 'partially-correct') {
+    return 'partial';
+  }
+  return c;
+};
+
+/**
+ * Get the feedback for the correctness
+ *
+ * @param {'correct'|'incorrect'|'partial'} correctness
+ * @param {Feedback} feedback
+ */
+var getFeedbackForCorrectness = exports.getFeedbackForCorrectness = function getFeedbackForCorrectness(correctness, feedback) {
+  return new Promise(function (resolve) {
+    feedback = _extends({}, defaults, feedback);
+    correctness = normalizeCorrectness(correctness);
+    var fb = feedback[correctness] || defaults[correctness] || {};
+    var d = defaults[correctness] || {};
+    getFeedback(fb, d[fb.type || 'default']).then(function (result) {
+      return resolve(result);
+    });
+  });
+};
+
+/**
+ * Get the feedback from a {FeedbackConfig}
+ *
+ * @param {FeedbackConfig} feedback
+ * @param {string} fallback
+ */
+var getFeedback = exports.getFeedback = function getFeedback(feedback, fallback) {
+  return new Promise(function (resolve) {
+    if (!feedback || feedback.type === 'none') {
+      resolve(undefined);
+      return;
+    }
+    feedback = feedback || {};
+    var out = feedback[feedback.type] || fallback;
+    resolve(out);
+  });
+};
+
+/***/ }),
+/* 174 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.scoreFromRule = undefined;
 exports.model = model;
 exports.outcome = outcome;
 
-var _utils = __webpack_require__(174);
+var _utils = __webpack_require__(175);
 
 var _debug = __webpack_require__(9);
 
 var _debug2 = _interopRequireDefault(_debug);
-
-var _compact = __webpack_require__(35);
-
-var _compact2 = _interopRequireDefault(_compact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6933,31 +7045,31 @@ const scoreFromRule = exports.scoreFromRule = (rule, fallback) => {
 function outcome(config, session, env) {
   return new Promise((resolve, reject) => {
     log('outcome...');
+    const maxScore = config.choices.length;
 
-    const choices = (0, _compact2.default)((session.value || []).map(v => config.choices.find(c => c.value === v)));
-    const correct = choices.filter(isCorrect);
-    const totalCorrect = config.choices.filter(isCorrect);
-    const allCorrect = correct.length === totalCorrect.length;
-    if (allCorrect) {
-      resolve({
-        score: 1
-      });
-    } else if (correct.length === 0) {
+    const chosen = c => !!(session.value || []).find(v => v === c.value);
+    const correctAndNotChosen = c => isCorrect(c) && !chosen(c);
+    const incorrectAndChosen = c => !isCorrect(c) && chosen(c);
+    const correctCount = config.choices.reduce((total, choice) => {
+      if (correctAndNotChosen(choice) || incorrectAndChosen(choice)) {
+        return total - 1;
+      } else {
+        return total;
+      }
+    }, config.choices.length);
+
+    if (!config.partialScoring && correctCount < maxScore) {
       resolve({ score: 0 });
     } else {
-      if (config.partialScoring) {
-        const rule = config.partialScoring.find(ps => ps.numberOfCorrect === correct.length);
-        const score = scoreFromRule(rule, correct / totalCorrect);
-        resolve({ score });
-      } else {
-        resolve({ score: 0 });
-      }
+      const scoreString = (correctCount / config.choices.length).toFixed(2);
+
+      resolve({ score: parseFloat(scoreString) });
     }
   });
 }
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6968,7 +7080,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.isResponseCorrect = exports.getCorrectResponse = undefined;
 
-var _isEqual = __webpack_require__(57);
+var _isEqual = __webpack_require__(56);
 
 var _isEqual2 = _interopRequireDefault(_isEqual);
 

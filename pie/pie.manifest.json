@@ -1,0 +1,21 @@
+{
+  "hash": "91863717",
+  "info": [
+    {
+      "element": "categorize-el",
+      "pie": "@pie-element/categorize",
+      "version": {
+        "requested": "2.7.2",
+        "resolved": "2.7.2"
+      }
+    },
+    {
+      "element": "multiple-choice",
+      "pie": "@pie-element/multiple-choice",
+      "version": {
+        "requested": "2.3.2",
+        "resolved": "2.3.2"
+      }
+    }
+  ]
+}
