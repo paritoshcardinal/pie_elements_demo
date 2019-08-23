@@ -1,0 +1,9 @@
+{
+  "elements": {
+    "multiple-choice-configure": "../.."
+  },
+  "models": [
+    {"id":"1","element":"multiple-choice-configure","prompt":"<p>What is the value of this expression? <br><br>&nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{7^3}{7^6}\\)</span>&nbsp;</p>","choiceMode":"radio","keyMode":"letters","choices":[{"correct":true,"value":"0","label":"<p>&nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{1}{343}\\)</span>&nbsp;</p>","feedback":{"type":"custom","value":"<p style=\"color: #008000; text-align: left;\">Correct. The student correctly subtracted 3 - 6 = -3, then simplified &nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{1}{7^3}\\)</span>&nbsp; and did the math.</p>"}},{"correct":false,"value":"1","label":"<p>&nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{1}{49}\\)</span>&nbsp;</p>","feedback":{"type":"custom","value":"<p style=\"color: #ff0000; text-align: left;\">The student divided the exponent numbers, &nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{6}{3}\\)</span>&nbsp;=2, then simplified &nbsp;<span class=\"mf-mc-pml-pie\" data-latex=\"\">\\(\\frac{1}{7^2}\\)</span>&nbsp;to get this answer.</p>"}},{"correct":false,"value":"2","label":"<p>49</p>","feedback":{"type":"custom","value":"<p>The student divided the exponents but instead of the exponent in the denominator, used it in the numerator.</p>"}},{"correct":false,"value":"3","label":"<p>343</p>","feedback":{"type":"custom","value":"<p>The correctly student subtracted the exponents but instead of the exponent in the denominator, used it in the numerator.</p>"}}],"correctFeedback":"<p>e.g. Great Job!</p>","incorrectFeedback":"<p>e.g. Oops, this was a wrong answer!</p>"}
+  ]
+}
+
